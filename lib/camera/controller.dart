@@ -20,7 +20,7 @@ class CustomCameraController extends GetxController {
   bool isFrontCam = false;
   File? videoFile;
   VideoPlayerController? videoPlayerController;
-  final double maxSeconds = 5;
+  final double maxSeconds = 30;
 
   late List<Map<String, dynamic>> sideButtons = [];
 
@@ -59,7 +59,7 @@ class CustomCameraController extends GetxController {
         videoPlayerController = VideoPlayerController.file(
           videoFile!,
         );
-        Get.offAllNamed('/player');
+        Get.offNamed('/player');
       }
     });
   }
